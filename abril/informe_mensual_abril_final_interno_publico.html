@@ -258,13 +258,13 @@
         <section id="resumen-ejecutivo" class="card">
             <h2>Resumen Ejecutivo</h2>
             <div class="placeholder-text">
-                <p><em>Aquí puedes escribir un resumen general...</em></p>
+                <p><em>El mes de abril muestra un aumento neto de 150 estudiantes activos, lo que representa aproximadamente cuatro nuevos cursos, totalizando 18.322 estudiantes, impulsado principalmente por la Educación Media Humanístico-Científica de Adultos y la Enseñanza Básica. Sin embargo, la asistencia promedio cayó del 85,15% al 83.72%. Para el mes de abril, ningún nivel educativo alcanzó consistentemente el 85% de asistencia, con la <strong>Enseñanza Media T-P Técnica Niños y Jóvenes </strong>registrando la asistencia más baja. En cuanto al flujo, hubo 685 nuevos ingresos y 535 bajas, con una tasa de retención mensual del 97.06%. Los retiros aumentaron significativamente, siendo la Educación Parvularia y la Enseñanza Básica las más impactadas, mientras que la Educación Media H-C Adultos muestra una proporción considerable de "nuevos retiros".</em></p>
             </div>
         </section>
 
         <section id="tendencias-generales" class="card">
             <h2>Tendencias Generales por Comuna</h2>
-            <p>La siguiente tabla muestra el <strong>número de establecimientos</strong>...</p>
+            <p>La siguiente tabla muestra el <strong>número de establecimeintos</strong> que han experimentado una mantención, un aumento o una disminución en sus indicadores clave de matrícula y asistencia, desglosado por comuna.</p>
             <table border="1" class="dataframe dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -334,9 +334,7 @@
     </tr>
   </tbody>
 </table>
-            <div class="placeholder-text">
-                <p><em>Este resumen permite identificar rápidamente...</em></p>
-            </div>
+            
         </section>
 
         <section id="matricula" class="card">
@@ -369,7 +367,7 @@
   </tbody>
 </table>
             
-            <div class="placeholder-text"><p><em>Interpretación: Este mes, la matrícula total es de 18.322, lo que representa un Aumento de 0,8% en comparación con el mes anterior. La variación neta es de 150 estudiantes.</em></p></div>
+            <div class="placeholder-text"><p><em>Este mes, la matrícula total es de 18.322, lo que representa un Aumento de 0,8% en comparación con el mes anterior. La variación neta es de 150 estudiantes.</em></p></div>
 
             <div class="iframe-container">
                 <iframe src="plots\03_matricula_bar_comparativo_tipo_ense.html" title="Gráfico comparativo de matrícula por tipo de enseñanza"></iframe>
@@ -440,7 +438,32 @@
     </tr>
   </tbody>
 </table>
-            <div class="placeholder-text"><p><em>Análisis de la matrícula por Tipo de Enseñanza.</em></p></div>
+            <div class="placeholder-text"><p><em>
+              
+
+              <p>La tabla anterior revela una variación neta de 150 estudiantes adicionales en el sistema entre marzo y abril. Este crecimiento general es impulsado principalmente por el aumento en la modalidad de adultos y la enseñanza básica.</p><br>
+
+<strong>Puntos Clave:</strong> <br>
+
+<ul>
+<li><strong> Aumento:</strong> La Educación de Personas Jóvenes y Adultas experimentó el incremento más significativo, con 108 nuevas matrículas. Este fue el principal motor del crecimiento general en el período.</li>
+
+<li><strong> Sostenido:</strong> La Enseñanza Básica y la Enseñanza Media Humanista-Científica (H-C) también mostraron un alza, con 40 y 24 nuevos estudiantes respectivamente, indicando una tendencia positiva en estos niveles.</li>
+
+<li><strong>Principal Descenso:</strong> La Educación Parvularia registró la mayor disminución, con una baja de 11 estudiantes.</li>
+
+<li><strong>Baja en Área Técnica: </strong>La Enseñanza Media Técnico-Profesional (T-P), en sus tres especialidades (Comercial, Industrial y Técnica), mostró una leve tendencia a la baja, sumando una disminución total de 13 estudiantes.</li>
+
+<li>Estabilidad: La Educación Especial se mantuvo prácticamente estable, con una variación mínima de solo 2 estudiantes.</li>
+</ul>
+<strong>Conclusión:</strong>
+
+El análisis evidencia un crecimiento neto en la matrícula, concentrado mayoritariamente en la educación para jóvenes y adultos. Se recomienda prestar atención a la tendencia decreciente en la Educación Parvularia y en las ramas Técnico-Profesionales para analizar sus causas y definir acciones si fuese necesario.
+
+
+
+
+            </em></p></div>
             
             <h3>Matrícula por Comuna (Abril vs. Marzo)</h3>
             <table border="1" class="dataframe dataframe">
@@ -485,7 +508,7 @@
     </tr>
   </tbody>
 </table>
-            <div class="placeholder-text"><p><em>Análisis de la matrícula por Comuna.</em></p></div>
+            <div class="placeholder-text"><p><em>Durante este periodo, todas las comunas experimentaron un aumento de la matrícula. Notorio es el caso de la comuna de San Ramón, en donde ingresaron 64 nuevos estudiantes.</em></p></div>
             
             <h3>Composición de la Matrícula Activa Total del Mes de Abril</h3>
             <div class="grid-container">
@@ -493,7 +516,7 @@
                     <iframe src="plots\04_matricula_bar_composicion_comuna.html" title="Gráfico de composición de matrícula activa del mes actual"></iframe>
                 </div>
             </div>
-            <div class="placeholder-text"><p><em>Análisis de la composición de matrícula por comuna</em></p></div>
+            <div class="placeholder-text"><p><em>El gráfico muestra la caracterización de la composición de matrícula del territorio. El mayor número de estudiantes se ubica en la enseñanza básica, en todas las comunas del Servicio Local. También se observa que San Miguel es la comuna con mayor número de estudiantes en el nivel de enseñanza media humanístico-científica. Respecto de la Enseñanza Media humanístico-científica de Adultos, San Ramón es la comuna del territorio con mayor número de estudiantes con 407 personas.</em></p></div>
         </section>
         
         <section id="asistencia" class="card">
@@ -519,16 +542,66 @@
     </tr>
   </tbody>
 </table>
-            <div class="placeholder-text"><p><em>Análisis: La asistencia promedio este mes fue de 83,72%, lo que representa una variación de Disminución de 1,9% en comparación con el mes anterior.</em></p></div>
+            <div class="placeholder-text"><p><em>La asistencia promedio este mes fue de 83,72%, lo que representa una variación de Disminución de 1,9% en comparación con el mes anterior.</em></p></div>
             
             <h3>Distribución General de Asistencia (Comparativa Mensual)</h3>
             <div class="grid-container">
                 <div class="iframe-container">
                     <iframe src="plots\04_Asistencia_Boxplot_General.html" title="Gráfico de BoxPlot General de Asistencia"></iframe>
-                </div>
-
-                
+                                    </div>               
             </div>
+            
+            
+            <div class="placeholder-text"><p><em>
+              
+
+        <h3>Puntos Clave:</h3>
+        <ul>
+            <li><strong>Disminución del Promedio General:</strong> El promedio de asistencia <strong>disminuyó en 1.62 puntos porcentuales</strong>, pasando de un <strong>85.34% en marzo a un 83.72% en abril</strong>.</li>
+            <li><strong>Caída en la Mediana:</strong> La mediana, que representa el valor central, muestra una caída más pronunciada. En marzo, el 50% de los estudiantes tenía una asistencia superior al 94.7%, mientras que en abril este umbral <strong>bajó a 90.5%</strong>. Esto indica que el comportamiento del "estudiante típico" empeoró.</li>
+            <li><strong>Distribución Menos Favorable en Abril:</strong> El "cuerpo" central de la asistencia (la caja del gráfico) se desplazó hacia abajo en abril. En marzo, el 50% central de los alumnos tuvo una asistencia entre 83.3% y 100%, mientras que en abril este rango fue de 80% a 95.2%.</li>
+            <li><strong>Persistencia del Ausentismo Crónico:</strong> Ambos meses muestran una cantidad considerable de datos atípicos (los puntos individuales), lo que indica la existencia de un grupo persistente de estudiantes con muy bajos niveles de asistencia.</li>
+        </ul>
+
+        <h3>Conclusión:</h3>
+        <p>
+            Los datos evidencian un deterioro general en la asistencia de marzo a abril. No solo el promedio disminuyó, sino que la distribución completa se desplazó hacia valores más bajos. La tendencia a la baja en el grueso del estudiantado requiere atención para identificar sus causas y revertirla.
+        </p></em></p></div>
+
+         <div class="container"><p>
+
+        
+
+        <h2>Guía Rápida: Cómo Leer un Diagrama de Caja y Bigotes 📊</h2>
+        <p>
+            El diagrama de caja y bigotes es una herramienta visual excelente para entender cómo se distribuyen los datos. Te muestra el rango, la tendencia central y la dispersión, todo en un solo gráfico. Aquí te explicamos sus partes:
+        </p>
+        <ul>
+            <li>
+                <strong>La Caja (El 50% central de los datos):</strong> El rectángulo principal contiene a la mitad de todos tus datos.
+                <ul>
+                    <li>El <strong>borde inferior</strong> de la caja es el <strong>primer cuartil (Q1)</strong>. El 25% de los datos es menor que este valor.</li>
+                    <li>La <strong>línea dentro</strong> de la caja es la <strong>mediana (Q2)</strong>. Es el valor que está justo en el medio: la mitad de los datos está por encima y la otra mitad por debajo.</li>
+                    <li>El <strong>borde superior</strong> de la caja es el <strong>tercer cuartil (Q3)</strong>. El 75% de los datos es menor que este valor.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Los Bigotes (El rango de los datos):</strong> Las líneas que se extienden desde la caja se llaman "bigotes". Muestran el rango de la mayor parte de los datos (generalmente, el valor mínimo y máximo que no se consideran atípicos).
+            </li>
+            <li>
+                <strong>Los Puntos Individuales (Datos Atípicos):</strong> Cualquier punto fuera de los bigotes se considera un dato atípico. Son valores inusualmente altos o bajos en comparación con el resto del grupo. En este gráfico, representan a los estudiantes con ausentismo muy alto.
+            </li>
+            <li>
+                <strong>El Rombo Rojo (El Promedio):</strong> En estos gráficos específicos, el rombo rojo se añadió para mostrar el <strong>promedio</strong> (o media aritmética) de todos los datos, que puede ser diferente a la mediana.
+            </li>
+        </ul>
+        <p>En resumen, este tipo de gráfico permite comparar de forma rápida y eficaz la distribución de diferentes grupos, como la asistencia de un mes contra otro.</p>
+   
+              
+
+
+
+            </p></div>
             
             <h3>Diagrama de Cajas por Comuna</h3>
             <div class="grid-container">
@@ -608,7 +681,21 @@
         <div class="iframe-container">
             <iframe src="plots\08_asistencia_bar_horizontal_tipo_ense.html" title="Gráfico de análisis de promedio de asistencia horizontal por tipo de enseñanza"></iframe>
         </div>
-        <div class="placeholder-text"><p><em>Análisis de la asistencia promedio por Tipo de Enseñanza.</em></p></div>
+        <div class="placeholder-text"><p><em>Se observa una disminución generalizada en la asistencia de estudiantes en todos los niveles educativos al comparar el mes de marzo con abril.
+
+          <ul>
+            
+        <li><strong> Descenso: </strong>La caída más pronunciada se registra en la Enseñanza Media T-P Técnica para Niños y Jóvenes, con una baja de 10,65 puntos porcentuales.</li>
+
+        <li><strong>Menor Descenso:</strong> La Educación Especial por Discapacidad Intelectual es la modalidad que presenta la variación negativa más leve, con un descenso de solo 0,91 puntos porcentuales.</li>
+
+        <li><strong>Niveles de Asistencia:</strong> A pesar de la tendencia a la baja, la Enseñanza Básica se mantuvo en abril como el nivel con la tasa de asistencia más alta (83,43%). Por el contrario, la Educación de Personas Jóvenes y Adultas registró la asistencia más baja en ambos meses, cayendo a un 61,90% en abril.</li>
+        </ul>
+
+        En resumen, los datos evidencian un deterioro en la regularidad de la asistencia escolar en el transcurso de un mes, afectando de manera más significativa a la educación técnico-profesional y a la educación de adultos.
+
+
+</em></p></div>
 
         <h3>Asistencia Promedio por Comuna</h3>
         <table border="1" class="dataframe dataframe">
@@ -653,20 +740,20 @@
     </tr>
   </tbody>
 </table>
-        <div class="placeholder-text"><p><em>Análisis de la asistencia promedio por Comuna.</em></p></div>
+        <div class="placeholder-text"><p><em>
+          
+
+          Al desglosar la asistencia por comuna, se confirma que la tendencia a la baja fue un fenómeno transversal entre marzo y abril. Todas las comunas experimentaron una caída en sus porcentajes de asistencia. La disminución más pronunciada se registró en San Ramón, con una baja de 7,52 puntos porcentuales. Le siguen La Cisterna (-4,65 p.p.) y San Miguel (-4,34 p.p.). Por su parte, San Miguel fue la comuna con la reducción de asistencia más leve, aunque igualmente significativa, de 6.58 puntos porcentuales.
+        </em></p></div>
 
         <h3>Mapa de Calor de Días de Ausencia</h3>
         <div class="grid-container">
             <div class="iframe-container"> <iframe src="plots\06_asistencia_heatmap_tasa_actual.html" title="Mapa de calor del mes actual"></iframe></div>
             <div class="iframe-container"> <iframe src="plots\06_asistencia_heatmap_tasa_anterior.html" title="Mapa de calor del mes anterior"></iframe></div>
         </div>
-        <div class="placeholder-text"><p><em>Análisis del mapa de calor de ausentismo.</em></p></div>
+        <div class="placeholder-text"><p><em>Mientras que <strong>marzo presenta un comportamiento de ausentismo estable y predecible</strong>, abril muestra una realidad completamente distinta, donde un evento puntual y extremo distorsiona el promedio general del mes.</em></p></div>
         
-        <div>
-            <h3>Alerta de Baja Asistencia (Menor a 85%)</h3>
-            <p>Se ha generado un reporte en PDF con los estudiantes activos que presentan una asistencia inferior al 85% durante el mes de Abril.</p>
-            <a href="reporte_baja_asistencia.pdf" target="_blank" class="pdf-link" style="background-color: #ffc107; color: #212529;">Descargar PDF: Alerta de Baja Asistencia</a>
-            </div>
+        
         
     </section>
 
@@ -1203,7 +1290,21 @@
     </tr>
   </tbody>
 </table>
-                        <div class="placeholder-text"><p><em>Análisis del flujo de matrícula activa.</em></p></div>
+                        <div class="placeholder-text"><p><em>
+                          El sistema muestra un balance positivo en su matrícula durante el último mes.
+                          <ul>
+
+                            <li><strong>Crecimiento Neto:</strong> Se registró un aumento neto de 150 estudiantes, pasando de 18.172 a 18.322 alumnos activos.</li> 
+
+                            <li><strong>Movimientos: </strong> Este crecimiento es el resultado de la incorporación de 685 nuevos ingresos, que superaron a las 535 bajas registradas en el mismo período.</li>
+
+                            <li><strong>Retención:</strong> La Tasa de Retención Mensual es del 97,06%, lo que indica un alto nivel de continuidad por parte del cuerpo estudiantil.</li>
+
+                            </ul>
+
+
+
+                        </em></p></div>
                     </div>
                     <div>
                         <h3>Resumen de Conteos de Retiros</h3>
@@ -1237,7 +1338,25 @@
     </tr>
   </tbody>
 </table>
-                        <div class="placeholder-text"><p><em>Análisis de los conteos de retiros.</em></p></div>
+                        <div class="placeholder-text"><p><em>A pesar del crecimiento, se observa una tendencia preocupante en el aumento de los retiros formales.
+
+                          <ul>
+
+                            <li>
+
+                          <strong>Aumento de Retiros:</strong> El número total de estudiantes en estado de "retiro" aumentó de 690 en marzo a 1.251 en abril, lo que representa un incremento del 81%. </li>
+
+                          <li>
+
+                          <strong>Composición de los Retiros:</strong> Este total de abril se compone de 566 nuevos estudiantes marcados como retirados durante este mes y 685 que ya se encontraban en esa condición previamente. </li>
+
+
+                          <li>
+                          <strong>Reincorporaciones: </strong>Es destacable que 5 estudiantes que estaban marcados como retirados dejaron de estarlo, lo que sugiere un pequeño flujo de reincorporación. </li>
+ 
+                          </ul>
+
+</em></p></div>
                     </div>
                 </div>
 
@@ -1682,13 +1801,7 @@
 </table>
                 <div class="placeholder-text"><p><em>Análisis de la tasa de retiro por establecimiento. Una tasa alta puede indicar problemas que requieren atención.</em></p></div>
                 
-                <h3>Detalle de Nuevos Retiros (Abril)</h3>
-                <div><p>La información detallada se ha generado en un archivo PDF.</p><a href="detalle_nuevos_retiros.pdf" target="_blank" class="pdf-link">Descargar PDF: Detalle de Nuevos Retiros</a></div>
-                <div class="placeholder-text"><p><em>Análisis del detalle de nuevos retiros.</em></p></div>
-                
-                <h3>Detalle de Todos los Retiros (Abril)</h3>
-                <div><p>La información detallada se ha generado en un archivo PDF.</p><a href="detalle_total_retiros.pdf" target="_blank" class="pdf-link">Descargar PDF: Detalle de Todos los Retiros</a></div>
-                <div class="placeholder-text"><p><em>Análisis del detalle de todos los retiros del mes actual.</em></p></div>
+               
             </section>
 
                 
