@@ -1,25 +1,28 @@
+
+
+
+    
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe Mensual de Asistencia, Matrícula y Retiros - Julio 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-color: #212529;
-            --heading-color: #003366;
-            --primary-color: #007bff;
-            --primary-color-dark: #0056b3;
-            --header-bg: #003366;
-            --header-color: #ffffff;
-            --border-color: #dee2e6;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --border-radius: 12px;
+            --background-color: #ffffff;
+            --text-color: #363636;
+            --text-color-light: #99ABB5;
+            --heading-color: #1a1a1a;
+            --primary-color: #2563eb;
+            --primary-color-light: #dbeafe;
+            --border-color: #B2B2B2;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --divider: 0.5px solid #B2B2B2;
         }
 
         body {
@@ -28,117 +31,139 @@
             color: var(--text-color);
             margin: 0;
             padding: 0;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .main-container {
+            padding: 40px 0;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+        }
+
+        .topic-tag {
+            color: var(--text-color-light);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .headline {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .drophead {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            line-height: 1.5;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .byline {
+            color: var(--text-color-light);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+        }
+
+        .content-section:not(:last-child) {
+            border-bottom: var(--divider);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+
+        .subsection-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin: 40px 0 24px 0;
+            line-height: 1.3;
+        }
+        
+        .insight-box {
+            background-color: var(--primary-color-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-color);
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: var(--header-bg);
-            color: var(--header-color);
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: var(--border-radius);
-            margin: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-            font-weight: 700;
-        }
-
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        .card {
-            background-color: var(--card-background);
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        h2 {
-            font-size: 1.8em;
-            color: var(--heading-color);
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 15px;
-            margin-top: 0;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        h3 {
-            font-size: 1.4em;
-            color: var(--heading-color);
-            margin-top: 25px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .placeholder-text {
-            background-color: #e9f1ff;
-            border-left: 5px solid var(--primary-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        .insight-box-positive {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
             font-style: italic;
-            color: #003366;
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        .placeholder-text-positivo {
-            background-color: #e9f1ff;
-            border-left: 5px solid var(--primary-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        .insight-box-negative {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
             font-style: italic;
-            color: #003366;
-        }
-
-        .placeholder-text-negativo {
-            background-color: #e0795a;
-            border-left: 5px solid var(--primary-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-            font-style: italic;
-            color: #270808;
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
 
-        .placeholder-text p {
+        .insight-box p, 
+        .insight-box-positive p, 
+        .insight-box-negative p {
             margin: 0;
         }
 
-        .grid-container {
+        .chart-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 32px;
+            margin: 32px 0;
         }
 
-        .iframe-container {
+        .chart-container {
             width: 100%;
             height: 0;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 para mejor responsividad */
+            padding-bottom: 56.25%;
             position: relative;
             border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            box-shadow: var(--shadow);
+            margin: 24px 0;
         }
 
-        .iframe-container iframe {
+        .chart-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -147,311 +172,344 @@
             border: none;
         }
         
-        .full-width-iframe-container {
-            grid-column: 1 / -1; /* Ocupa todo el ancho */
-            aspect-ratio: 16 / 7;
+        .chart-full-width {
+            grid-column: 1 / -1;
         }
 
-        table.dataframe {
-            width: auto;
-            max-width: 80%; 
+        .data-table {
+            width: 100%;
             border-collapse: collapse;
-            font-size: 0.9em;
-            margin: 25px auto;
+            font-size: 0.95rem;
+            margin: 32px 0;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        table.dataframe th, table.dataframe td {
-            border: 1px solid var(--border-color);
-            padding: 12px 15px;
+        .data-table th, 
+        .data-table td {
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 20px;
             text-align: left;
         }
 
-        table.dataframe th {
-            background-color: #f2f2f2;
-            color: var(--heading-color);
+        .data-table th {
+            background-color: #f8fafc;
+            color: var(--text-color);
             font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85em;
+            font-size: 0.875rem;
+            letter-spacing: 0.025em;
         }
 
-        table.dataframe tbody tr {
-            border-bottom: 1px solid var(--border-color);
+        .data-table tbody tr:hover {
+            background-color: #f8fafc;
         }
 
-        table.dataframe tbody tr:nth-of-type(even) {
-            background-color: #f8f9fa;
-        }
 
-        table.dataframe tbody tr:last-of-type {
-            border-bottom: 2px solid var(--primary-color);
-        }
         
-        table.dataframe tbody tr:hover {
-            background-color: #e9f5ff;
-        }
 
-        .kpi-grid {
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
         }
 
-        .kpi-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: var(--border-radius);
+        .metric-card {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
             border: 1px solid var(--border-color);
             text-align: center;
         }
-        .kpi-card h4 {
-            margin: 0 0 10px 0;
-            color: var(--heading-color);
-            font-size: 1em;
+        
+        .metric-card h4 {
+            margin: 0 0 12px 0;
+            color: var(--text-color);
+            font-size: 1rem;
             font-weight: 500;
         }
-        .kpi-card .value {
-            font-size: 2em;
+        
+        .metric-card .value {
+            font-size: 2.25rem;
             font-weight: 700;
             color: var(--primary-color);
+            line-height: 1.1;
         }
         .boxplot-container {
-            padding-bottom: 75%; /* Aspect ratio 4:3 para boxplots */
+            padding-bottom: 75%;
         }
 
-        .pdf-link {
+        .download-link {
             display: inline-block;
             background-color: var(--primary-color);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 24px;
             text-align: center;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: 500;
+            margin-top: 16px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
         }
 
-        .pdf-link:hover {
-            background-color: var(--primary-color-dark);
-            transform: translateY(-2px);
+        .download-link:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
         }
 
-        footer {
+        .footer {
             text-align: center;
-            padding: 30px;
-            font-size: 0.9em;
-            color: #6c757d;
-            margin-top: 30px;
+            padding: 40px 0;
+            font-size: 0.95rem;
+            color: var(--text-color-light);
+            margin-top: 60px;
+            border-top: var(--divider);
         }
 
-        @media (max-width: 1200px) {
-            .grid-container {
+        @media (max-width: 992px) {
+            .chart-grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
             }
-            .container {
-                max-width: 100%;
+            .headline {
+                font-size: 2.25rem;
             }
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+            .main-container {
+                padding: 24px 0;
             }
-            header {
-                margin: 10px;
-                padding: 20px;
+            .headline {
+                font-size: 1.875rem;
             }
-            .card {
-                padding: 20px;
+            .section-title {
+                font-size: 1.5rem;
             }
-            h2 {
-                font-size: 1.5em;
+            .subsection-title {
+                font-size: 1.25rem;
             }
-            h3 {
-                font-size: 1.2em;
-            }
-            .grid-container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            .iframe-container {
-                padding-bottom: 75%; /* Aspect ratio más alto para móviles */
+            .chart-container {
+                padding-bottom: 75%;
             }
             .boxplot-container {
-                padding-bottom: 100%; /* Aspect ratio 1:1 para móviles */
+                padding-bottom: 100%;
             }
-            table.dataframe {
-                font-size: 0.8em;
-                max-width: 100%;
+            .data-table {
+                font-size: 0.875rem;
             }
-            table.dataframe th, table.dataframe td {
-                padding: 8px 10px;
+            .data-table th, 
+            .data-table td {
+                padding: 12px 16px;
+            }
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8em;
+            .headline {
+                font-size: 1.5rem;
             }
-            header p {
-                font-size: 1em;
+            .drophead {
+                font-size: 1.125rem;
             }
-            .card {
-                padding: 15px;
+            .data-table {
+                font-size: 0.8125rem;
             }
-            .kpi-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            table.dataframe {
-                font-size: 0.7em;
-            }
-            table.dataframe th, table.dataframe td {
-                padding: 6px 8px;
+            .data-table th, 
+            .data-table td {
+                padding: 8px 12px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Informe Mensual de Asistencia, Matrícula y Retiros - Julio 2025</h1>
-        <p>Correspondiente al mes de Julio 2025, en comparación con el mes de Junio 2025.</p>
-        <p>Departamento de Estudios, Monitoreo y Datos</p>
-    </header>
-
-    <div class="container">
-        <section id="resumen-ejecutivo" class="card">
-            <h2>Resumen Ejecutivo</h2>
-            <div class="placeholder-text">
-                <p><em>Durante este mes, la matrícula total creció en 168 estudiantes, alcanzando los 18.604. Este crecimiento fue liderado por la E. Media H-C (+43) y E. Especial de Discapacidad Intelectual (+7). La asistencia promedio general aumentó a 83,6%, todas las comunas registraron variación positiva, la mayoría por sobre el 5%. Finalmente, el número total de estudiantes en estado de retiro es un aspecto que genera persiste en preocupación dado un nuevo aumento, de 1.807 a 2.224 durante julio.</em></p>
+    <div class="container-fluid">
+        <div class="main-container">
+            <!-- Header Section -->
+            <div class="row">
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="header-section">
+                        <span class="topic-tag">EDUCACIÓN</span>
+                        <h1 class="headline">Informe Mensual de Asistencia, Matrícula y Retiros - Julio 2025</h1>
+                        <p class="drophead">Correspondiente al mes de Julio 2025, en comparación con el mes de Junio 2025.</p>
+                        <p class="byline">Por Departamento de Estudios, Monitoreo y Datos • Generado agosto 28, 2025</p>
+                        <div style="border-bottom: var(--divider); margin: 40px 0;"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
+            </div>
+            <!-- Resumen Ejecutivo -->
+            <div class="row">
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="content-section">
+                        <h2 class="section-title">Resumen Ejecutivo</h2>
+                        <div class="insight-box">
+                            <p><em>Durante este mes, la matrícula total creció en 168 estudiantes, alcanzando los 18.604. Este crecimiento fue liderado por la E. Media H-C (+43) y E. Especial de Discapacidad Intelectual (+7). La asistencia promedio general aumentó a 83,6%, todas las comunas registraron variación positiva, la mayoría por sobre el 5%. Finalmente, el número total de estudiantes en estado de retiro es un aspecto que genera persiste en preocupación dado un nuevo aumento, de 1.807 a 2.224 durante julio.</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
             </div>
 
-            
-        </section>
-
-        <section id="tendencias-generales" class="card">
-            <h2>Tendencias Generales por Comuna</h2>
-            <p>La siguiente tabla muestra el <strong>número de establecimientos</strong>...</p>
-            <table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Indicador De Tendencia</th>
-      <th>La Cisterna</th>
-      <th>Lo Espejo</th>
-      <th>Pedro Aguirre Cerda</th>
-      <th>San Miguel</th>
-      <th>San Ramón</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Aumentan Matrícula</td>
-      <td>4</td>
-      <td>12</td>
-      <td>10</td>
-      <td>7</td>
-      <td>8</td>
-      <td>41</td>
-    </tr>
-    <tr>
-      <td>Disminuyen Matrícula</td>
-      <td>2</td>
-      <td>2</td>
-      <td>4</td>
-      <td>2</td>
-      <td>3</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>Mantiene Matrícula</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>Aumentan Asistencia</td>
-      <td>8</td>
-      <td>14</td>
-      <td>15</td>
-      <td>8</td>
-      <td>7</td>
-      <td>52</td>
-    </tr>
-    <tr>
-      <td>Disminuyen Asistencia</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-      <td>5</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>Mantiene Asistencia</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-            <div class="placeholder-text">
-                <p><em>Este resumen permite identificar que un<strong> 68,3% de los establecimientos que aumentó su matrícula</strong> respecto al mes anterior,<strong> el 53,5% lo concentra Lo Espejo (29,2%) y Pedro Aguirre Cerda (24,3%).</strong> Por otra parte, <strong>un 21,6% disminuyeron</strong>, concentrados en un <strong>30,6% en P.A.C</strong> Y <strong>San Ramón con 23%</strong> de los casos. 
-                </em></p>
-                <p><em> </em></p>
+            <!-- Tendencias Generales -->
+            <div class="row">
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="content-section">
+                        <h2 class="section-title">Tendencias Generales por Comuna</h2>
+                        <p>La siguiente tabla muestra el <strong>número de establecimientos</strong> que presentan diferentes tendencias por comuna:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="data-table table">
+                                <thead>
+                                    <tr>
+                                        <th>Indicador De Tendencia</th>
+                                        <th>La Cisterna</th>
+                                        <th>Lo Espejo</th>
+                                        <th>Pedro Aguirre Cerda</th>
+                                        <th>San Miguel</th>
+                                        <th>San Ramón</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Aumentan Matrícula</strong></td>
+                                        <td>4</td>
+                                        <td>12</td>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td><strong>41</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Disminuyen Matrícula</strong></td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td><strong>13</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mantiene Matrícula</strong></td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td><strong>6</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Aumentan Asistencia</strong></td>
+                                        <td>8</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>8</td>
+                                        <td>7</td>
+                                        <td><strong>52</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Disminuyen Asistencia</strong></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>5</td>
+                                        <td><strong>8</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mantiene Asistencia</strong></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td><strong>0</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="insight-box-positive">
+                            <p><em>Este resumen permite identificar que un<strong> 68,3% de los establecimientos aumentó su matrícula</strong> respecto al mes anterior,<strong> el 53,5% lo concentra Lo Espejo (29,2%) y Pedro Aguirre Cerda (24,3%).</strong> Por otra parte, <strong>un 21,6% disminuyeron</strong>, concentrados en un <strong>30,6% en P.A.C</strong> y <strong>San Ramón con 23%</strong> de los casos.</em></p>
+                        </div>
+                        
+                        <div class="insight-box">
+                            <p><em>Respecto a la <strong>Asistencia, un 86,6% de los establecimientos aumentaron</strong> su asistencia respecto al mes anterior, siendo <strong> Lo Espejo y P.A.C quienes concentran este aumento con un 55,7% de los establecimientos</strong>, con un 26,9% y 28,9%, respectivamente. Los establecimientos que representan una <strong> disminución de la asistencia corresponden al 13,3% y se concentran en San Ramón y San Miguel, representando el 87% de los casos, con un 62,5% y 25%</strong>, respectivamente.</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
             </div>
-            <div class="placeholder-text">
-                <p><em>Respecto a la <strong>Asistencia, un 86,6% de los establecimientos aumentaron</strong> su asistencia respecto al mes anterior, siendo <strong> Lo Espejo y P.A.C quienes concentran este aumento con un 55,7% de los establecimientos</strong>, con un 26,9% y 28,9%, respectivamente. Los establecimientos que representan una <strong> disminución de la asistencia corresponden al 13,3% y se concentran en San Ramón y San Miguel, representando el 87% de los casos, con un 62,5% y 25%</strong>, respectivamente. 
-                </em></p>
-                <p><em> </em></p>
-            </div>
-        </section>
 
-        <section id="matricula" class="card">
-            <h2>1. Análisis de Matrícula</h2>
-            <h3>Indicadores Clave de Matrícula</h3>
-            <table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Indicador</th>
-      <th>Valor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Matrícula Junio 2025</td>
-      <td>18.436</td>
-    </tr>
-    <tr>
-      <td>Matrícula Julio 2025</td>
-      <td>18.604</td>
-    </tr>
-    <tr>
-      <td>Variación Absoluta</td>
-      <td>168</td>
-    </tr>
-    <tr>
-      <td>Variación Porcentual</td>
-      <td>0,91%</td>
-    </tr>
-  </tbody>
-</table>
-            
-            <div class="placeholder-text"><p><em>Interpretación: Este mes, la <strong>matrícula total</strong> es de 18.604, lo que <strong>representa un Aumento de 0,9%</strong> en comparación con el mes anterior. La variación neta es de 168 estudiantes.</em></p></div>
-
-            <div class="iframe-container">
-                <iframe src="plots\03_matricula_bar_comparativo_tipo_ense.html" title="Gráfico comparativo de matrícula por tipo de enseñanza"></iframe>
+            <!-- Análisis de Matrícula -->
+            <div class="row">
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="content-section">
+                        <h2 class="section-title">1. Análisis de Matrícula</h2>
+                        <h3 class="subsection-title">Indicadores Clave de Matrícula</h3>
+                        <div class="table-responsive">
+                            <table class="data-table table">
+                                <thead>
+                                    <tr>
+                                        <th>Indicador</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Matrícula Junio 2025</strong></td>
+                                        <td>18.436</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Matrícula Julio 2025</strong></td>
+                                        <td>18.604</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Variación Absoluta</strong></td>
+                                        <td>+168</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Variación Porcentual</strong></td>
+                                        <td>+0,91%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="insight-box-positive">
+                            <p><em>Interpretación: Este mes, la <strong>matrícula total</strong> es de 18.604, lo que <strong>representa un aumento de 0,9%</strong> en comparación con el mes anterior. La variación neta es de 168 estudiantes.</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-1 col-lg-2 col-xl-3"></div>
             </div>
-            </br>
-            <div class="iframe-container">
-                <iframe src="plots\05_matricula_lollipop_variacion.html" title="Gráfico de variación de matrícula por tipo de enseñanza"></iframe>
+
+            <!-- Gráficos de Matrícula -->
+            <div class="row">
+                <div class="col-12 col-lg-1 col-xl-2"></div>
+                <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="chart-grid">
+                        <div class="chart-container">
+                            <iframe src="plots\03_matricula_bar_comparativo_tipo_ense.html" title="Gráfico comparativo de matrícula por tipo de enseñanza"></iframe>
+                        </div>
+                        <div class="chart-container">
+                            <iframe src="plots\05_matricula_lollipop_variacion.html" title="Gráfico de variación de matrícula por tipo de enseñanza"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-1 col-xl-2"></div>
             </div>
 
             <h3>Matrícula por Tipo de Enseñanza (Julio 2025 vs. Junio 2025)</h3>
@@ -569,8 +627,7 @@
                     <iframe src="plots\04_matricula_bar_composicion_comuna.html" title="Gráfico de composición de matrícula activa del mes actual"></iframe>
                 </div>
             </div>
-            <div class="placeholder-text"><p><em> <strong>P.A.C concentra la matrícula más alta</strong>, predominando en ella la Enseñanza Básica (64,9%), con presencia relevante en Educación Parvularia (12%) y Enseñanza Media H-C (10%). Le sigue Lo Espejo, con un perfil similar, donde también predomina la Enseñanza Básica (2.689), acompañada por Parvularia (420) y un volumen moderado en Media H-C (435).</em>
-
+            <div class="placeholder-text"><p><em> <strong>P.A.C concentra la matrícula más alta</strong>, predominando en ella la Enseñanza Básica (64,9%), con presencia relevante en Educación Parvularia (12%) y Enseñanza Media H-C (10%). Le sigue Lo Espejo, con un perfil similar, donde también predomina la Enseñanza Básica (2.689), acompañada por Parvularia (420) y un volumen moderado en Media H-C (435).</em></p>
 </div>
             <div class="placeholder-text"><p><em>
 En contraste, San Miguel presenta menor matrícula total, manteniendo una base sólida en E. Básica (57,9%) y en Enseñanza Media H-C (21,9%). San Ramón, aunque con matrícula global más baja, sigue la misma tendencia: predominio de Básica (52,6%), complementada con Media H-C (345) y Educación de Personas Jóvenes y Adultas (21,2%). Finalmente, La Cisterna registra la matrícula más reducida, con E. Básica (57,9%) como nivel central, pero destacando además la presencia relativamente alta en Media H-C (23,5%), en proporción a su tamaño total.
@@ -621,6 +678,7 @@ En contraste, San Miguel presenta menor matrícula total, manteniendo una base s
 <div class="iframe-container boxplot-container"><iframe src="plots\10_asistencia_boxplot_SAN_RAMÓN.html" title="BoxPlot Asistencia San Ramón"></iframe></div>
 
             </div>
+     
             
 
 
@@ -1774,13 +1832,20 @@ En contraste, San Miguel presenta menor matrícula total, manteniendo una base s
 
                 
 
-                <footer>
-                    <p>Reporte generado el 28-08-2025 por el Departamento de Estudios, Monitoreo y Datos del SLEP Santa Rosa, utilizando las Bases de Datos de Julio 2025 de 2025, procesadas por
-                    el Centro de Estudios del Ministerio de Educación.</p>
-                </footer>
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer">
+                        <p>Reporte generado el 28-08-2025 por el Departamento de Estudios, Monitoreo y Datos del SLEP Santa Rosa, utilizando las Bases de Datos de Julio 2025, procesadas por el Centro de Estudios del Ministerio de Educación.</p>
+                    </div>
+                </div>
             </div>
-        </body>
-        </html>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 
                  
